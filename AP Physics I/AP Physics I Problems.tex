@@ -1,38 +1,184 @@
 \documentclass{article}
 \usepackage{amsmath}
 \usepackage{framed}
+\usepackage[inline]{enumitem}  
 \usepackage[pdftex]{graphicx}
-\usepackage[letterpaper, total={6.5in, 9in}]{geometry}
+\usepackage[letterpaper, total={7.5in, 10in}]{geometry}
 \title{JPS Science League: AP Physics I}
 \author{Kevin Yang and Elisha Zhao}
 \date{Entrance Test}
+\makeatletter
+% This command ignores the optional argument for itemize and enumerate lists
+\newcommand{\inlineitem}[1][]{%
+\ifnum\enit@type=\tw@
+    {\descriptionlabel{#1}}
+  \hspace{\labelsep}%
+\else
+  \ifnum\enit@type=\z@
+       \refstepcounter{\@listctr}\fi
+    \quad\@itemlabel\hspace{\labelsep}%
+\fi}
+\makeatother
+\parindent=0pt
 \begin{document}
 	\maketitle
 	\renewcommand{\labelenumii}{\alph{enumii})}
+	\textbf{Instruction: }There are $25$ test questions, $5$ bonus questions and $1$ thought provoking question in this exam. The $25$ questions will determine your placement while the $5$ bonus questions will serve as tie breakers. The thought provoking question is just for you to think about after the exam if you enjoy physics. You will be given $50$ minutes for this exam. Points will not be taken off for wrong answers so you are encouraged to answer every question. Remember, finish the $25$ questions before starting the bonus. Good luck and have fun!
 	\begin{enumerate}
-		\item  
+		\item[1)]  %Graph analysis
 		\begin{enumerate}
 			\item
-			\item 
-			\item 
-			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
 		\end{enumerate}
 		%Question 2: Projectile Problem
-		\item  A major issue in the news is the Trump border wall. Suppose that such a wall were to be build and the wall is $11m$ tall. Kevin is a very curious kid and wants to see at what angle would it take to launch a ball over the wall. Sadly, Kevin isn't very bright and built a cemented down launcher located at $14m$ away from the wall. Furthermore, the launcher can only shoot at an angle of $56$ degrees. What is the minimum speed so the ball can just pass over the top of the wall.
+		\item[2)]  A major issue in the news is the Trump border wall. Suppose that such a wall were to be build and the wall is $11m$ tall. Kevin is a very curious kid and wants to see at what angle would it take to launch a ball over the wall. Sadly, Kevin isn't very bright and built a cemented down launcher located at $14m$ away from the wall. Furthermore, the launcher can only shoot at an angle of $56$ degrees. What is the minimum speed so the ball can just pass over the top of the wall.
 		\begin{enumerate}
 			\item
-			\item 
-			\item 
-			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
 		\end{enumerate}
-		%Question 3: Object on a ramp
-		\item  
+	\end{enumerate}
+	%Ramp on a building and then the ball rolls off the ramp and then off the building.
+	\textbf{Use the following information for Questions \#3 and \#4:} Kevin got bored one day and accidentally built a $500\;m$ tall building. On top of the building, Kevin added a ramp with an incline of $30$ degrees and height of $10\;m$. The ramp does not extend the entire width of the building such that the end of the ramp is not the edge of the building(the ball has to roll on a flat surface after leaving the ramp). Suppose that all transitions are smooth and all forces of friction are negligible since Kevin is so great at engineering.
+	\begin{enumerate}
+		%Question 3: Object rolling off a ramp
+		\item[3)] One day, Kevin stole a bowling ball from the bowling ball team. After being chased to the top of his building, Kevin decided that the only way out was by rolling the bowling ball off the roof. In order to give the bowling ball, which as a mass of $7\;kg$, enough velocity, Kevin decided to roll the ball off the ramp. After placing the bowling ball at the top of the ramp, what is the velocity of the ball at the bottom of the ramp?
+		\begin{enumerate}
+		 %Change the assumed velocity in following problem to trick the kiddos
+			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
+		\end{enumerate}
+		%Question 4: Object rolling off a building
+		\item[4)] Regardless of your answer to the last problem, assume that velocity at the end of the ramp is $20\;\frac{m}{s}$. Determine the horizontal distance the bowling ball could travel after it leaves the roof. 
 		\begin{enumerate}
 			\item
-			\item 
-			\item 
-			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
 		\end{enumerate}
+		%Question 5: Force Analysis on Rolling Ball
+		\item[5)] Suppose there is a ball with a mass of $10\;kg$. Let the ball be rolling without sliding on a rough surface at $3\;\frac{m}{s}$. You are given the static and kinetic coefficients of friction to be $\mu_s = 0.67$ and $\mu_k = 0.3$. Find the amount of force needed to be exerted at a $30$ degree angle to keep the ball moving at a constant velocity.
+		\begin{enumerate}
+			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
+		\end{enumerate}
+		%Question 6: Atwood Machine
+		\item[6)] A really common physics problem given to beginning physics students is called the Atwood machine. This setup is so commmonplace in the world of physics education that even the US Physics Team uses it in some form. An Atwood machine is basically two weights connected by a string draped over a pulley. The pulley in this case is completely massless and frictionless. The mass on the left side is $12.6\;kg$ while the mass on the right side is $3.7\;kg$. What is the tension on the string connecting the two masses?
+		\begin{enumerate}
+			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
+		\end{enumerate}
+	\end{enumerate}
+	\textbf{Use the following for Questions \#7 and \#8: }There is a ramp of $45$ degrees from the ground and coefficients of friction $\mu_s = 0.62$ and $\mu_k = 0.47$. A box with a mass of $14\;kg$ is placed on the ramp.
+	\begin{enumerate}
+		%Question 7: Person pushing box on ramp
+		\item[7)] Elisha can only exert a force horizontal to the ground. Find the amount of force she needs to exert inorder to keep the box in static equilibrium.
+		\begin{enumerate}
+			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
+		\end{enumerate}
+		%Problem 8: Free sliding box on ramp
+		\item[8)] If Elisha were to stop pushing the box. Find the acceleration the box would have as it slides down the ramp.
+		\begin{enumerate}
+			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
+		\end{enumerate}
+		%Question 9: Velocity after rolling off building
+		\item[9)]
+		When Kevin was writing this test, he kinda got bored and decided to build something. Again, he accidentally built a building but this time it is $H\;m$ tall. To express his rage at his ability to accidentally build skyscrapers, Kevin decided to roll a ball off the roof at a horizontal velocity of $v\;\frac{m}{s}$. Kevin chose one of his heaviest balls-weighing at $m\;kg$. However, as a aspiring physicist, Kevin wanted to know what was the final velocity of the ball just before it hit the ground. Can you help him figure it out?
+		\begin{enumerate}
+			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
+		\end{enumerate}
+		\item[10)] %Graph Analysis
+		\begin{enumerate}
+			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
+		\end{enumerate}
+		%Force Analysis: Force between two blocks
+		\item[11)]
+		Suppose there are two blocks placed right next to each other. The left block is much bigger than the right block with a mass of $30\;kg$. The right block has a mass of $14\;kg$. Let us call the force between the two blocks $F_L$ when a force to the right is exerted on the left block. Let us call the force between the two blocks $F_R$ when a force to the left is exerted on the right block. These two forces are applied seperately. How does $F_L$ and $F_R$ compare?
+		\begin{enumerate}
+			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
+		\end{enumerate}
+		%Force Analysis: 2 string hanging ball
+		\item[12)]
+		Elisha is putting up some lamps in order to give the test takers some more light. Each lamp is held in place by $2$ strings. $1$ string attaches to ceiling at an angle of $60$ degrees while the second string perpendicularly attaches to the wall. Each lamp has a weight of $5.5\;kg$. Find the tension in the horizontal string.
+		\begin{enumerate}
+			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
+		\end{enumerate}
+		\item[13)]
+		
+	\end{enumerate}
+	\newpage
+	\textbf{Reminder: } Remember, finish the $25$ actual questions before moving onto the bonus and thought provoking question(TPQ). You will not get any extra time to do these. It is more important for you to place onto the team rather than having tiebreaker points. 
+	%Bonuses and TPQ
+	\begin{enumerate}
+		%DC Circuit
+		\item[Bonus 1)]
+		\begin{enumerate}
+			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
+		\end{enumerate}
+		%Electic Charges
+		\item[Bonus 2)]
+		\begin{enumerate}
+			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
+		\end{enumerate}
+		%Charges
+		\item[Bonus 3)]
+		\begin{enumerate}
+			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
+		\end{enumerate}
+		%Waves
+		\item[Bonus 5)]
+		\begin{enumerate}
+			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
+		\end{enumerate}
+		%Waves
+		\item[Bonus 6)]
+		\begin{enumerate}
+			\item
+			\inlineitem 
+			\inlineitem 
+			\inlineitem
+		\end{enumerate}
+		\item[TPQ: ]
+		Suppose you have a mass $m$ attached to a spring. Let the spring have an original coefficient of $k$. Originally, the mass is set into oscillation with an angular velocity of $\omega$ and a max amplitude of $A_0$. Over a course of $10^6$ years, aka it takes a long time, the spring constant decays to $\frac{k}{2}$ while the mass is still oscillating. What multiple of the original amplitude $A_0$ is the new amplitude $A_f$?
 	\end{enumerate}
 \end{document}
 

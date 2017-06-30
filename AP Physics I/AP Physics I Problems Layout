@@ -1,19 +1,20 @@
 Physics I Problems Layout
 [ - ] - Graph Analysis 
-[ - ] - Ball rolling of building
-[X- - ] - Projectile problem
-[ - - ] - Object on a ramp
-[ - ] - Force Analysis 
+[X-X] - Ball rolling of building
+[X- ] - Projectile problem
+[X-X-X] - Object on a ramp
+[X-X-X] - Force Analysis 
 [ - ] - Energy
-[ - - ] - Pulley System(Atwood Machine)
-[ - ] - Planetary Motion
-[ - ] - Springs(Block falling onto Spring x[ ])
-[ ] - Momentum
+[X] - Pulley System(Atwood Machine)
+[ ] - Planetary Motion
+[ - ] - Springs(Block falling onto Spring)
+[ - ] - Momentum
 [ ] - Pendulum 
 [ ] - Simple Harmonic
-[ ] - Rotational
-
+[ - ] - Rotational
+[ ] - Bullet into a Pendulum
 BONUS:
 [ ] - DC Circuit
 [ - ] - Electric Charges
 [ - ] - Waves
+ 
