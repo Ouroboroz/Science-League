@@ -4,15 +4,15 @@ Physics I Problems Layout
 [X- ] - Projectile problem
 [X-X-X] - Object on a ramp
 [X-X-X] - Force Analysis 
-[ - ] - Energy
+[X-X] - Energy
 [X] - Pulley System(Atwood Machine)
-[ ] - Planetary Motion
-[ - ] - Springs(Block falling onto Spring)
-[ - ] - Momentum
-[ ] - Pendulum 
-[ ] - Simple Harmonic
-[ - ] - Rotational
-[ ] - Bullet into a Pendulum
+[X] - Planetary Motion
+[X-X] - Springs(Block falling onto Spring)
+[X-X] - Momentum
+[X] - Pendulum 
+[X] - Simple Harmonic
+[X-X] - Rotational
+[X] - Bullet into a Pendulum
 BONUS:
 [ ] - DC Circuit
 [ - ] - Electric Charges
