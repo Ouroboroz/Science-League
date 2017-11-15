@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage[inline]{enumitem}  
+\usepackage[pdftex]{graphicx}
+\usepackage[letterpaper, total={7.5in, 10in}]{geometry}
+\title{JPS Science League: Chemistry I}
+\author{Kevin Yang and Elisha Zhao}
+\date{Entrance Exam}
+\makeatletter
+% This command ignores the optional argument for itemize and enumerate lists
+\newcommand{\inlineitem}[1][]{%
+\ifnum\enit@type=\tw@
+    {\descriptionlabel{#1}}
+  \hspace{\labelsep}%
+\else
+  \ifnum\enit@type=\z@
+       \refstepcounter{\@listctr}\fi
+    \quad\@itemlabel\hspace{\labelsep}%
+\fi}
+\makeatother
+\parindent=0pt
+\begin{document}
+	\maketitle
+	\renewcommand{\labelenumii}{\alph{enumii})}
+	\textbf{Instructions: }There are $25$ test questions and $5$ bonus questions in this exam. The $25$ questions will determine your placement while the $5$ bonus questions will serve as tie breakers. You will be given $50$ minutes for this exam. Points will not be taken off for wrong answers so you are encouraged to answer every question. Remember, finish the $25$ questions before starting the bonus. Good luck and have fun!
+	\begin{enumerate}
+		%Question 1: Measurement
+		\item[1)]
+		Something really small can be very important. The prefix "pico" is ued to indicate something very small. What power of $10$ is equivalent to "pico".
+		\begin{enumerate}
+			\item $-3$
+			\inlineitem $-9$
+			\inlineitem $-12$
+			\inlineitem $-15$
+		\end{enumerate}
+		%Question 2: Properties
+		\item[2)]
+		
+	l\end{enumerate}
+\end{document}
