@@ -1,11 +1,10 @@
 Chemistry I Problems Layout:
-[ ] - measurement
-[ ] - properties
-[ ] - mixtures
-[ - ] - compounds
-[ - ] - formulas
-[ ] - mole
-[ - ] - weight percent
+[X] - measurement
+[X-X] - properties
+[X-X] - compounds
+[X-X] - formulas
+[X] - mole
+[X- ] - weight percent
 [ - ] - chemical reactions
 [ ] - using the metal and non-metal activity series for writing chemical reactions
 [ - ] - types of reactions
