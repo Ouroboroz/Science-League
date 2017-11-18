@@ -1,8 +1,9 @@
 \documentclass{article}
 \usepackage{amsmath}
-\usepackage{framed}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{width=3in,compat=1.9}
 \usepackage[inline]{enumitem}  
-\usepackage[pdftex]{graphicx}
 \usepackage[letterpaper, total={7.5in, 10in}]{geometry}
 \title{JPS Science League: AP Physics II}
 \author{Kevin Yang and Elisha Zhao}
@@ -29,8 +30,33 @@
 		\item[1)]
 		Kevin loves PV diagrams. Almost as much as he loves the Carnot cycle. Given the following PV diagram:
 		%Add diagram
-
-		Which of the following transition type is it:
+		\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[
+	           		axis lines = left,
+					title={Sample PV Diagram},
+	    			xlabel= {$V(L)$},
+	    			ylabel= {$P(atm)$},
+                    xmin = 0,
+	                xmax = 10,
+                    ymin = 0,
+                    ymax = 10,
+                    samples = 100,
+	    			]
+					\addplot[
+						domain = 1:3,
+						color = blue,
+					]
+					{10/(x)};  
+					\addplot[
+						domain = 5:9,
+						color = red,
+					]
+					{32/x};
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		Which of the following transition type is the blue curve:
 		\begin{enumerate}
 			\item
 			\inlineitem 
@@ -41,7 +67,44 @@
 		\item[2)]
 		Kevin really loves Carnot cycles. In order to share his love of Carnot cycles with you, he decided to give you a Carnot cycle question. However, a Carnot cycle would be too simple so he decided to spice things up by changing a transition of the Carnot cycle. According to the diagram below:
 		%Add diagram
-
+		\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[
+	           		axis lines = left,
+					title={The Carnot Cycle},
+	    			xlabel= {$V(L)$},
+	    			ylabel= {$P(atm)$},
+                    xmin = 0,
+	                xmax = 12,
+                    ymin = 0,
+                    ymax = 12,
+                    samples = 100,
+	    			]
+					\addplot[
+						domain = 2:3,
+						color = blue,
+					]
+					{10/(x-1)-1};  
+					\addplot[
+						domain = 2:7,
+						color = red,
+					]
+					{32/(x+3)+2.6};
+                    \addplot[
+						domain = 7:8,
+						color = blue,
+					]
+					{10/(x-6)-4.2};
+                    \addplot[
+						domain = 3:8,
+						color = red,
+					]
+					{32/(x+2)-2.4};
+                    \node[label = {90:{$T_H = 800K$}}, circle, fill, inner sep = 2pt] at (axis cs:2,9){};
+                    \node[label = {0:{$T_L = 200K$}}, circle, fill, inner sep = 2pt] at (axis cs:8,0.8){};
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
 		What is the maximum amount of work that an engine running the proposed cycle can provide?
 		\begin{enumerate}
 			\item
@@ -56,7 +119,7 @@
 	\begin{enumerate}
 		%Question 3: Completing the heat chart
 		\item[3)]
-		On the chart, there is a missing square labled $(A)$. Please use the already filling in information of the chart and prior knowledge to deduce what belongs in $(A)$.
+		On the chart, there is a missing square labeled $(A)$. Please use the already filling in information of the chart and prior knowledge to deduce what belongs in $(A)$.
 		\begin{enumerate}
 			\item
 			\inlineitem 
@@ -74,7 +137,7 @@
 		\end{enumerate}
 		%Question 5: Third Law of Thermodynamics
 		\item[5)]
-		 Kevin loves building stuff. One day after school he was hanging out with his friends(which he has a lot of btw) and accidentally built a way. This wall was extremely long, thick and magnificient. It was the best wall that he had ever laid eyes on.  Normally, temperatures in NJ go up to as much as $110^o$F. The proposed wall has entropy, in fact, a lot of entropy. Which of the following objects would have the least entropy?
+		 Kevin loves building stuff. One day after school he was hanging out with his friends(which he has a lot of btw) and accidentally built a way. This wall was extremely long, thick and magnificent. It was the best wall that he had ever laid eyes on.  Normally, temperatures in NJ go up to as much as $110^o$F. The proposed wall has entropy, in fact, a lot of entropy. Which of the following objects would have the least entropy?
 		\begin{enumerate}
 			\item An sphere at $0\;K$
 			\inlineitem  A crystal at $0\;K$
@@ -83,7 +146,7 @@
 		\end{enumerate}
 		%Question 6: Ideal gas law
 		\item[6)]
-		Elisha was working with ideal gases for a science experiment that she was designing. More specifically, she used a monotomic ideal gas-meaning that there is only one atom per molecule. The gas was initially at a temperature of $23^o$C, pressure of $2.3\;atm$, and a volume of $2.2\;L$. Elisha raises the temperature to $45^o$C and allows the pressure to decrease to $0.9\;atm$. What is the new volume of the gas?
+		Elisha was working with ideal gases for a science experiment that she was designing. More specifically, she used a monoatomic ideal gas-meaning that there is only one atom per molecule. The gas was initially at a temperature of $23^o$C, pressure of $2.3\;atm$, and a volume of $2.2\;L$. Elisha raises the temperature to $45^o$C and allows the pressure to decrease to $0.9\;atm$. What is the new volume of the gas?
 		\begin{enumerate}
 			\item
 			\inlineitem 
@@ -100,7 +163,7 @@
 			\inlineitem
 		\end{enumerate}
 	\end{enumerate}
-	\textbf{Use the following information for Questions \#8 and \#9: }After reading the problems that he wrote, Kevin realized that he is quite narcissistic for using his himself has the main character in all but one question so far. Thus, Kevin wishes to wash these sins off using water. To do so, Kevin designs a shower system. All of the water comes from a water tank placed $20\;m$ into the air. A pipe, placed perpendicular to the ground, with a diameter of $20\;cm$ brings the water down to Kevin's head level of $2\;m$. Before water arrives at the shower head, the $20\;cm$ pipe smoothly becomes a pipe with a diameter of $10\;cm$. Suppose that every component is frictionless, all curves are completely smooth and curved so no energy will be lost and the viscosity of water is neglibible.
+	\textbf{Use the following information for Questions \#8 and \#9: }After reading the problems that he wrote, Kevin realized that he is quite narcissistic for using his himself has the main character in all but one question so far. Thus, Kevin wishes to wash these sins off using water. To do so, Kevin designs a shower system. All of the water comes from a water tank placed $20\;m$ into the air. A pipe, placed perpendicular to the ground, with a diameter of $20\;cm$ brings the water down to Kevin's head level of $2\;m$. Before water arrives at the shower head, the $20\;cm$ pipe smoothly becomes a pipe with a diameter of $10\;cm$. Suppose that every component is frictionless, all curves are completely smooth and curved so no energy will be lost and the viscosity of water is negligible.
 	\begin{enumerate}
 		%Question 8: Fluid Dynamics
 		\item[8)]
@@ -122,7 +185,7 @@
 		\end{enumerate}
 		%Question 10: Fluid Statics
 		\item[10)]
-		Both Elisha and Kevin has Mr. Mac as a teacher for physics. There was an interesting concept that they learned in class about liquids that Elisha wanted to try out for herself. More commonly known as the hydrolic press/lifter, this device utilitizes Pascal's Law to lift different items. She has set up different kinds of hydrolic presses in order to lift different items. Check diagram below. The first press, $A$, has an input surface with a radius of $23\;cm$ and a output surface of $78\;cm$; it is lifting a mass of $30\;kg$. The second press, $B$, has an input surface with a radius of $47\;cm$ and a output surface of $83\;cm$; it is lifting a mass of $54\;kg$. The third press, $C$, has an output surface with a radius of $34\;cm$ and an output surface of $11\;cm$; it is lifting a weight of $7\;kg$. Can help ELisha rank the forces that she needs to exert on the presses from greatest to least?
+		Both Elisha and Kevin has Mr. Mac as a teacher for physics. There was an interesting concept that they learned in class about liquids that Elisha wanted to try out for herself. More commonly known as the hydrolic press/lifter, this device utilizes Pascal's Law to lift different items. She has set up different kinds of hydrolic presses in order to lift different items. Check diagram below. The first press, $A$, has an input surface with a radius of $23\;cm$ and a output surface of $78\;cm$; it is lifting a mass of $30\;kg$. The second press, $B$, has an input surface with a radius of $47\;cm$ and a output surface of $83\;cm$; it is lifting a mass of $54\;kg$. The third press, $C$, has an output surface with a radius of $34\;cm$ and an output surface of $11\;cm$; it is lifting a weight of $7\;kg$. Can you help Elisha rank the forces that she needs to exert on the presses from greatest to least?
 		\begin{enumerate}
 			\item
 			\inlineitem 
@@ -131,7 +194,7 @@
 		\end{enumerate}
 		%Ideal Gases
 		\item[11)]
-		H3h3's Ethan is often sporting a sign of VN in his pictures. This alludes to a very interesting activity that became popularized after the negative effects of tar in lungs became apparent. In the scientific community, this behavior is refered to the inhalation of water vapor. For the purpose the problem, let us assume that water molecules are diatomic(just ignore one of those teeny weeny little Hydrogens). Kevin was able to gather$1000\; Pa$ in a container with dimensions of $15\;m$ x $20\;m$ x $10\;m $ with a piston attached at $STP$. The walls of the container is perfected insulative so there is no heat transfer between the outside environment and the gas inside the container. While moving the container around, Kevin accidentally bumped the piston to make the dimensions of the container $15\;m$ x $20\;m$ x $15\; m$. What is the final pressure of the water vapor inside the container?
+		H3h3's Ethan is often sporting a sign of VN in his pictures. This alludes to a very interesting activity that became popularized after the negative effects of tar in lungs became apparent. In the scientific community, this behavior is referred to the inhalation of water vapor. For the purpose the problem, let us assume that water molecules are diatomic(just ignore one of those teeny weeny little Hydrogens). Kevin was able to gather$1000\; Pa$ in a container with dimensions of $15\;m$ x $20\;m$ x $10\;m $ with a piston attached at $STP$. The walls of the container is perfected insulative so there is no heat transfer between the outside environment and the gas inside the container. While moving the container around, Kevin accidentally bumped the piston to make the dimensions of the container $15\;m$ x $20\;m$ x $15\; m$. What is the final pressure of the water vapor inside the container?
 		\begin{enumerate}
 			\item
 			\inlineitem 
@@ -160,7 +223,7 @@
 		\end{enumerate}
 		%Heat
 		\item[14)]
-		Man's not hot. Never hot. You might tell man to take off his jacket. But man's not hot. Never hot. Suppose that Kevin wants to use a jacket made completely out of water to keep not hot in the summer. Kevin estimates that he needs $10\; kg$ of water to make the jacket. To make the jacket, Kevin first freezes ice at $0^o\; C$ into the shape of the jacket. Then he heats it up to room temperature of $25^o\; C$. How much heat would Kevin need to transfer inorder to do so? Water has a specific heat of $4.184\; \frac{J}{g*C}$ and a heat of fusion of $333.55\; \frac{J}{g}$. The specific heat of ice is $2.108\; \frac{J}{g*C}$. Air has a specific heat of $0.718\; \frac{J}{g*C}$. 
+		Man's not hot. Never hot. You might tell man to take off his jacket. But man's not hot. Never hot. Suppose that Kevin wants to use a jacket made completely out of water to keep not hot in the summer. Kevin estimates that he needs $10\; kg$ of water to make the jacket. To make the jacket, Kevin first freezes ice at $0^o\; C$ into the shape of the jacket. Then he heats it up to room temperature of $25^o\; C$. How much heat would Kevin need to transfer in order to do so? Water has a specific heat of $4.184\; \frac{J}{g*C}$ and a heat of fusion of $333.55\; \frac{J}{g}$. The specific heat of ice is $2.108\; \frac{J}{g*C}$. Air has a specific heat of $0.718\; \frac{J}{g*C}$. 
 		\begin{enumerate}
 			\item
 			\inlineitem 
@@ -169,7 +232,7 @@
 		\end{enumerate}
 		%Ideal Gas
 		\item[15)]
-		These questions are far from ideal. They have alot of wasted words and are designed to waste your time as you read. On the other hand, gases that are analyzed on this exam is always ideal. Elisha reading through her Giancolli Physics textbook when she came across different gas laws. Since she was smart, she only memorized the ideal gas law so now she doesn't know what Charles' Law is. Can you help her figure it out?
+		These questions are far from ideal. They have a lot of wasted words and are designed to waste your time as you read. On the other hand, gases that are analyzed on this exam is always ideal. Elisha reading through her Giancolli Physics textbook when she came across different gas laws. Since she was smart, she only memorized the ideal gas law so now she doesn't know what Charles' Law is. Can you help her figure it out?
 		\begin{enumerate}
 			\item
 			\inlineitem 
@@ -178,7 +241,7 @@
 		\end{enumerate}
 	\end{enumerate}
 	%Fluids
-	\textbf{Use the following information for Questions \#16 and \#17: } Kevin has procrastinated too much and is running out of time to write these problems. Thus, he decided to build a machine to help him write the problems. This machine is powered by runnning water($\rho = 1000\; \frac{kg/m^3}$) and has a water source of a massive water tank with dimensions $100\; m$ x $100\; m$ x $100\; m$. There is an unknown source of inflow that always keeps the water level with a height of $100\; m$. There is an outflow pipe with a radius of $10\; m$ connected to the bottom of the tank. This pipe eventually narrows into a radius of $5\; m$ and pushes a water wheel.
+	\textbf{Use the following information for Questions \#16 and \#17: } Kevin has procrastinated too much and is running out of time to write these problems. Thus, he decided to build a machine to help him write the problems. This machine is powered by running water($\rho = 1000\; \frac{kg}{m^3}$) and has a water source of a massive water tank with dimensions $100\; m$ x $100\; m$ x $100\; m$. There is an unknown source of inflow that always keeps the water level with a height of $100\; m$. There is an outflow pipe with a radius of $10\; m$ connected to the bottom of the tank. This pipe eventually narrows into a radius of $5\; m$ and pushes a water wheel.
 	\begin{enumerate}
 		%Fluid Dynamics
 		\item[16)]
@@ -191,7 +254,7 @@
 		\end{enumerate}
 		%Fluid Statics
 		\item[17)]
-		Kevin was in his Applied Calculus class when he got extremely bored. After fiddling with his desk a bit, he accidentally built a boat that was a hollow box with dimensions $20\; m$ x $20\; m$ x $15\; m$. Letting the square side as the base, Kevin places his boat into the tank and it submerges $40\%$ of the height. What is the bouyancy force on the boat?
+		Kevin was in his Applied Calculus class when he got extremely bored. After fiddling with his desk a bit, he accidentally built a boat that was a hollow box with dimensions $20\; m$ x $20\; m$ x $15\; m$. Letting the square side as the base, Kevin places his boat into the tank and it submerges $40\%$ of the height. What is the buoyancy force on the boat?
 		\begin{enumerate}
 			\item
 			\inlineitem 
@@ -218,7 +281,7 @@
 		\end{enumerate}
 	\end{enumerate}
 	\textbf{Use the following information for Questions \#20, \#21 and \#22: }
-	While Kevin was at Walmart, he saw a kit for building an electrical circuit. It looked pretty cool so he decided to buy it and play with it at home. After opening the kit, Kevin realized that he know had a square capacitor with side lengths of $1\; m$ and a seperation of $0.5\; m$, a battery with voltage of $12\;V$, $3$ resistors of resistances of $2\; \Omega,\; 5\; \Omega,\; 10\; \Omega$ and a lot of wire. 
+	While Kevin was at Walmart, he saw a kit for building an electrical circuit. It looked pretty cool so he decided to buy it and play with it at home. After opening the kit, Kevin realized that he know had a square capacitor with side lengths of $1\; m$ and a separation of $0.5\; m$, a battery with voltage of $12\;V$, $3$ resistors of resistances of $2\; \Omega,\; 5\; \Omega,\; 10\; \Omega$ and a lot of wire. 
 	\begin{enumerate}
 		%DC Circuit
 		\item[20)]
@@ -249,7 +312,7 @@
 		\end{enumerate}
 		%Electrostatics
 		\item[23)]
-		Elisha places the sphere $A$ with a charge of $15\; C$ at the origin. She then places the sphere $B$ with a charge of $-25\; C$ at a distance of $0.4\; m$ away from sphere $A$. Both spheres $A$ and $B$ are held in place by some mysterious force and will never move. Where should Elisha place the third sphere $C$ so that it would stay still and be in equilibium?
+		Elisha places the sphere $A$ with a charge of $15\; C$ at the origin. She then places the sphere $B$ with a charge of $-25\; C$ at a distance of $0.4\; m$ away from sphere $A$. Both spheres $A$ and $B$ are held in place by some mysterious force and will never move. Where should Elisha place the third sphere $C$ so that it would stay still and be in equilibrium?
 		\begin{enumerate}
 			\item
 			\inlineitem 
@@ -267,7 +330,7 @@
 		\end{enumerate}
 		%DC Circuit
 		\item[25)]
-		Analyze the circuit shown in $Figure\;25$. What is the current that passes through resistor $C$.
+		Kevin was too lazy to actually draw out a circuit and for a second forgot which test he was writing a question for. As a result the problem will be extremely easy. Consider a freebie from a good person. Suppose that you have a cube of wire. On each side there is a $6\; \Omega$ resister. What is the total resistance between any two diagonals of the cube?
 		\begin{enumerate}
 			\item
 			\inlineitem 

@@ -1,8 +1,8 @@
 \documentclass{article}
 \usepackage{amsmath}
-\usepackage{framed}
+\usepackage{pgfplots}
+\pgfplotsset{width=3in,compat=1.9}
 \usepackage[inline]{enumitem}  
-\usepackage[pdftex]{graphicx}
 \usepackage[letterpaper, total={7.5in, 10in}]{geometry}
 \title{JPS Science League: AP Physics I}
 \author{Kevin Yang and Elisha Zhao}
@@ -28,7 +28,7 @@
 		\item[1)]  %GRAPH
 		To get to school everyday, Kevin must wake up really early. Normally he wakes up an hour before the time he has to leave but he always snoozes until the last moment. On the day Kevin had to give out the entrance exam, Kevin accidentally snoozed one too many times and is extremely behind schedule. To make up for the lost time, Kevin started up his car and began accelerating in a straight line at $4\;\frac{m}{s^2}$. Which of the following could be a graph of his motion?
 		\begin{enumerate}
-			\item
+			\item 
 			\inlineitem 
 			\inlineitem 
 			\inlineitem
@@ -108,7 +108,23 @@
 		\end{enumerate}
 		\item[10)] %Graph Analysis
 		Elisha has a metal sphere of $14\;kg$. The sphere is extremely smooth so all forces of friction is negligible. Elisha pushes on the sphere based on the following graph:
-		%Import graph
+		\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[
+	           		axis lines = left,
+					title={Graph of a Metal Sphere},
+	    			xlabel= {$t$},
+	    			ylabel= {$x$},
+	                xmax = 35,
+	    			]
+					\addplot[
+						domain = 0:30,
+						color = blue,
+					]
+					{5*x};
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
 		What is the total kinetic energy of the sphere?
 		\begin{enumerate}
 			\item
@@ -118,7 +134,7 @@
 		\end{enumerate}
 		%Force Analysis: Force between two blocks
 		\item[11)]
-		Suppose there are two blocks placed right next to each other. The left block is much bigger than the right block with a mass of $30\;kg$. The right block has a mass of $14\;kg$. Let us call the force between the two blocks $F_L$ when a force to the right is exerted on the left block. Let us call the force between the two blocks $F_R$ when a force to the left is exerted on the right block. These two forces are applied seperately. How does $F_L$ and $F_R$ compare?
+		Suppose there are two blocks placed right next to each other. The left block is much bigger than the right block with a mass of $30\;kg$. The right block has a mass of $14\;kg$. Let us call the force between the two blocks $F_L$ when a force to the right is exerted on the left block. Let us call the force between the two blocks $F_R$ when a force to the left is exerted on the right block. These two forces are applied separately. How does $F_L$ and $F_R$ compare?
 		\begin{enumerate}
 			\item
 			\inlineitem 
@@ -136,7 +152,7 @@
 		\end{enumerate}
 		%Question 13: Energy Question
 		\item[13)]
-		After a lot of persuasion from his friends, Kevin finally went to a therapy course for those who accidentally build skycrapers. Sadly, along the way, Kevin accidentally build a rollercoaster with two hills. The first hill has a height of $326\; m$ while the second hill has $211\;m$. Sadly, Kevin was a bit tired while he was building the rollercoaster so friction is no longer neglible. Luckily, along the $200\;m$ long path from the top of the first hill to the second, the force of friction is constant at $9\;N$. Can you find the velocity of the car at the second hill if the rollercoaster has a mass of $1000\;kg$?
+		After a lot of persuasion from his friends, Kevin finally went to a therapy course for those who accidentally build skyscrapers. Sadly, along the way, Kevin accidentally build a rollercoaster with two hills. The first hill has a height of $326\; m$ while the second hill has $211\;m$. Sadly, Kevin was a bit tired while he was building the rollercoaster so friction is no longer negligible. Luckily, along the $200\;m$ long path from the top of the first hill to the second, the force of friction is constant at $9\;N$. Can you find the velocity of the car at the second hill if the rollercoaster has a mass of $1000\;kg$?
 		\begin{enumerate}
 			\item
 			\inlineitem 
@@ -153,7 +169,7 @@
 			\inlineitem
 		\end{enumerate}
 	\end{enumerate}
-	\textbf{Use the following information for Questions \#15 and \#16: }At his therapy sessions, Kevin realized the importance of responsiblity. Since he had built so many buildings, he needed to also create ways of getting people down from the top of the building. A great idea that he came up with is putting a huge spring at the bottom of his building. In order to test this theory out, Kevin decided to make a smaller scale model with a ideal Hookean spring of no mass and a spring constant of $7\;\frac{N}{m}$. The spring is as long as it needs to be. Kevin only has a mass of $15\;kg$
+	\textbf{Use the following information for Questions \#15 and \#16: }At his therapy sessions, Kevin realized the importance of responsibility. Since he had built so many buildings, he needed to also create ways of getting people down from the top of the building. A great idea that he came up with is putting a huge spring at the bottom of his building. In order to test this theory out, Kevin decided to make a smaller scale model with a ideal Hookean spring of no mass and a spring constant of $7\;\frac{N}{m}$. The spring is as long as it needs to be. Kevin only has a mass of $15\;kg$
 	\begin{enumerate}
 		%Question 15: Block dropped onto Spring
 		\item[15)]
@@ -205,7 +221,7 @@
 		\end{enumerate}
 		%Question 20: Pendulum Question
 		\item[20)]
-		Kevin is often extremely hyperactive and probably has ADHD. In order to calm him down, many of his friends has to use a pendulum to hypnotize him. To create a pendulum, Kevin's friends hung a mass of $2\;kg$ by a string of length $32\;cm$. However, in order to advoid being hypnotized, Kevin simply times his eyes with the pendulum's motion. To do so, Kevin needs to know how long the pendulum takes in order to make one revolution. Suppose that everything is ideal and friction is negligible. Can you help find out how long is the period of the pendulum is?\begin{enumerate}
+		Kevin is often extremely hyperactive and probably has ADHD. In order to calm him down, many of his friends has to use a pendulum to hypnotize him. To create a pendulum, Kevin's friends hung a mass of $2\;kg$ by a string of length $32\;cm$. However, in order to avoid being hypnotized, Kevin simply times his eyes with the pendulum's motion. To do so, Kevin needs to know how long the pendulum takes in order to make one revolution. Suppose that everything is ideal and friction is negligible. Can you help find out how long is the period of the pendulum is?\begin{enumerate}
 			\item
 			\inlineitem 
 			\inlineitem 
@@ -230,7 +246,7 @@
 			\inlineitem
 		\end{enumerate}
 		%Question 23: Momentum
-		Recently, NASA is working on the James Webb Telescope. The JWT will allow NASA to see deep into space with infared rays. In order to control which direction the telescope is pointed in, NASA uses a very large fly wheel. The point of the flywheel is for you to decide but you shall do some calculations about it anyways. The Telescope has a mass of $6500\;kg$ and the fly wheel has a seperate mass of $1000\;kg$. The flywheel was originally spinning at an angular velocity of $2\;rpm$ clockwise. if the flywheel was suddenly flipped $180$ degrees(aka it is now spinning counterclockwise but as the same speed), how fast would the JWT spin and in what direction.
+		Recently, NASA is working on the James Webb Telescope. The JWT will allow NASA to see deep into space with infrared rays. In order to control which direction the telescope is pointed in, NASA uses a very large fly wheel. The point of the flywheel is for you to decide but you shall do some calculations about it anyways. The Telescope has a mass of $6500\;kg$ and the fly wheel has a separate mass of $1000\;kg$. The flywheel was originally spinning at an angular velocity of $2\;rpm$ clockwise. if the flywheel was suddenly flipped $180$ degrees(aka it is now spinning counterclockwise but as the same speed), how fast would the JWT spin and in what direction.
 		\begin{enumerate}
 			\item
 			\inlineitem 

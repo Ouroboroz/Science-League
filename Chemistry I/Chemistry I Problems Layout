@@ -1,14 +1,13 @@
 Chemistry I Problems Layout:
-[ ] - measurement
-[ ] - properties
-[ ] - mixtures
-[ - ] - compounds
-[ - ] - formulas
-[ ] - mole
-[ - ] - weight percent
-[ - ] - chemical reactions
-[ ] - using the metal and non-metal activity series for writing chemical reactions
-[ - ] - types of reactions
+[X] - measurement
+[X-X] - properties
+[X-X] - compounds
+[X-X] - formulas
+[X] - mole
+[X- ] - weight percent
+[X- ] - chemical reactions
+[X] - using the metal and non-metal activity series for writing chemical reactions
+[X- ] - types of reactions
 [ - - ] - stoichiometry
 [ ] - atomic structure and history which includes alpha, beta, gamma radiation, but not electronic configuration.
 [ ] -  orbital notation
